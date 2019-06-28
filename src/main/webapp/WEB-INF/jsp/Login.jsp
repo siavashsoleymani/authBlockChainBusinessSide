@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,10 +76,15 @@
                     document.getElementById("qrcode_img").src = result['link'];
                     var refreshId = setInterval(function () {
                         $.getJSON({
-                            url:"http://localhost:8081/user?lid="+result['lid'], success: function (result2) {
+                            url: "http://localhost:8081/user?lid=" + result['lid'], success: function (result2) {
                                 console.log(result2);
                                 clearInterval(refreshId);
-                                document.location.href = "http://localhost:8081/profile?name=نام: "+result2['name'] + "&dob=تاریخ تولد: "+result2['dob'] + "&sex=" + result2['sex'];
+                                document.location.href = "http://localhost:8081/profile" +
+                                    "?name=" + result2['name']
+                                    + "&dob=" + result2['dob']
+                                    + "&sex=" + result2['sex']
+                                    + "&family=" + result2['family']
+                                    + "&email=‌" + result2['email'];
                             }
                         });
                     }, 1000);

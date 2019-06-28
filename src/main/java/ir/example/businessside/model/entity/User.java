@@ -13,19 +13,41 @@ public class User {
 
     private String name;
 
+    private String family;
+
+    private String email;
+
     private String dob;
 
     private String sex;
 
     private String lid;
 
-    public User(String name, String dob, String sex) {
+    public User(String name, String family, String email, String dob, String sex) {
         this.name = name;
+        this.family = family;
+        this.email = email;
         this.dob = dob;
         this.sex = sex;
     }
 
     public User() {
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getName() {

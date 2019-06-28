@@ -64,8 +64,10 @@
         <span id="username_txt">${name}</span>
         <span id="greeting_txt">عزیز ورود شما با موفقیت انجام شد.</span>
         <span id="profile_info_txt">اطلاعات کاربری شما</span>
-        <span class="infos" id="name">${name}</span>
-        <span class="infos" id="dob">${dob}</span>
+        <span class="infos" id="name">نام: ${name}</span>
+        <span class="infos" id="family">نام خانوادگی: ${family}</span>
+        <span class="infos" id="email">ایمیل: ${email}</span>
+        <span class="infos" id="dob">تاریخ تولد: ${dob}</span>
         <span class="infos" id="sex">جنسیت: ${sex}</span>
     </div>
 </body>

@@ -12,14 +12,18 @@ public class LoginController {
         return "Login";
     }
 
-    @GetMapping(value = "/profile", params = {"name", "dob", "sex"})
+    @GetMapping(value = "/profile", params = {"name", "family", "email", "dob", "sex"})
     public String getProfile(Model model,
                              @RequestParam("name") String name,
+                             @RequestParam("family") String family,
+                             @RequestParam("email") String email,
                              @RequestParam("dob") String dob,
                              @RequestParam("sex") Boolean sex) {
         model.addAttribute("name", name);
+        model.addAttribute("family", family);
+        model.addAttribute("email", email);
         model.addAttribute("dob", dob);
-        model.addAttribute("sex", !sex ? "زن" : "مرد");
+        model.addAttribute("sex", sex ? "زن" : "مرد");
         return "Profile";
     }
 }
